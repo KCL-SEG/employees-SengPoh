@@ -1,5 +1,4 @@
 """Employment Contracts"""
-import employee
 
 # Salary contacts do not have hours
 # Bonus contracts do not have commission count
@@ -18,4 +17,6 @@ class Contract:
         commission_pay = self.commission
         if (self.commission_count):
             commission_pay = commission_pay * self.commission_count
+
+        return contract_pay + commission_pay
     
