@@ -11,7 +11,7 @@ class Employee:
         return self.contract.get_pay()
 
     def __str__(self):
-        return self.name
+        return f"{self.name} works on {str(self.contract)} Their total pay is {self.get_pay()}."
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.

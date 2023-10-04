@@ -20,3 +20,18 @@ class Contract:
 
         return contract_pay + commission_pay
     
+    def __str__(self):
+        return_string = "a"
+        if (self.hours):
+            return_string += f" contract of {self.hours} hours at {self.pay}/hour"
+        else:
+            return_string += f" monthly salary of {self.pay}" 
+
+        if (self.commission):
+            if (self.commission_count):
+                return_string += f" and receives a commission for {self.commission_count} contract(s) at {self.commission}/contract"
+            else:
+                return_string += f" and receives a bonus commission of {self.commission}"
+        
+        return_string += "."
+        return return_string
